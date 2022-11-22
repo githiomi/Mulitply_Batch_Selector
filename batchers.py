@@ -1,9 +1,6 @@
 import math
 from typing import List, Dict
 from csv import DictReader
-from math import ceil
-import datetime
-import random
 
 from Product import Product
 
@@ -54,19 +51,29 @@ def create_batches(
 
     # You will need to fake moving time forward. You are free to decide
     # How small/big each time step will be
-    time_step = ((24 / num_batches) * 60)  # Each time step is an hour
-    print(time_step)
+    hour = 0
+    minute = 0
+    interval = ((24 / num_batches) * 60)
 
     # List to hold all the batches per day
     batches = []
 
     for i in range(num_batches):
         # Call the create_batch function
-        print("Batch number {}".format(i + 1), "of {}".format(num_batches), "at {}".format(curr_datetime))
+
+        time = str("{}".format(hour) + ":" + "{}".format(int(minute)))
+
+        print("Batch number {}".format(i + 1), "of {}".format(num_batches), "at {}".format(time))
         batch = create_batch(day_num, num_batches, max_batch_size, prods)
 
         # Add created batch to existing batches
         batches.append(batch)
+
+        minute += interval
+        if minute >= 60:
+            # Increase hours
+            hour += 1
+            minute = minute - 60
 
         # curr_datetime += time_step
         # create_batch_kwarg["current_datetime"] = curr_datetime
@@ -84,8 +91,6 @@ def create_batch(
 
     for b in range(number_of_batches):
         batch_counter = 0
-
-        print("This batch will have the following products:")
 
         # Fot the string of products in the batch
         batch = ""

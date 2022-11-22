@@ -17,14 +17,14 @@ from batchers import create_batches
 num_days = 7
 
 # for small db
-# datafile = "db.csv"
-# DAILY_BATCHES = 3  # A batch every 4 hours
-# MAX_BATCH_SIZE = 2
+datafile = "db.csv"
+DAILY_BATCHES = 3
+MAX_BATCH_SIZE = 2
 
 # for large db
-datafile = "db_large.csv"
-DAILY_BATCHES = 30
-MAX_BATCH_SIZE = 8
+# datafile = "db_large.csv"
+# DAILY_BATCHES = 30
+# MAX_BATCH_SIZE = 8
 
 curr_datetime = datetime.datetime.now()
 
@@ -37,7 +37,7 @@ for i in range(num_days):
 
     # Add your create_batches args here
     daily_batch = create_batches(i+1, DAILY_BATCHES, MAX_BATCH_SIZE, datafile, curr_datetime)
-    print("Batches for day {}:".format(1 + 1) + str(daily_batch))
+    print("Batches for day {}:".format(i + 1) + str(daily_batch))
 
 # TODO: Save info about your batch to a file
 # with open("new" + datafile, 'w') as batches:
