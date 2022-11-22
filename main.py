@@ -10,8 +10,6 @@ outcome required in this task.
 """
 import csv
 import datetime
-import os
-import random
 
 from batchers import create_batches
 

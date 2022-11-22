@@ -1,5 +1,5 @@
 import math
-from typing import List, Dict
+from typing import List
 from csv import DictReader
 
 from Product import Product
@@ -10,14 +10,12 @@ def create_batches(
         num_batches,
         max_batch_size,
         datafile,
-        curr_datetime
 ) -> List[str]:
     """
     Create a required number of scraping batches. Presumed this will be run once daily
 
     :param day_num: The specific day number
     :param datafile: The name of the data file passed from main
-    :param curr_datetime: The current date and time
     :param num_batches: Total number of batches to create. Assumed to be a daily value
     :param max_batch_size: Maximum size of each batch. actual size <= max_batch_size
 
