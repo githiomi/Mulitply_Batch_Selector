@@ -1,13 +1,13 @@
 # Daniel Githiomi
 ## Completed Batch Selector App
 
-This is my formal submission for the Batch Selector App required for the Junior Software Developer Role at Multiply.
+This is my formal submission for the Batch Selector App required for the `Junior Software Developer Role at Multiply`.
 
 It is a Python Project with the context and application requirements listed below.
 
 Link to the downloaded repository is linked [here](https://bitbucket.org/msldev/batch_selector/src/master/)
 
-Github link to this repository is also available [here](https://github.com/githiomi/multiply_batch_selector)
+Github link to this repository is also available [here](https://github.com/githiomi/Multiply_Batch_Selector)
 
 ## Technologies Used
 
@@ -18,7 +18,7 @@ It is made entirely using PyCharm where all the following files were created and
 No bugs to report at the moment! the system works efficiently at 100% guaranteed. Feel free to search the output on googl to ensure that it coincides exactly.
 
 ## Setup Instructions
-* git clone [this](https://github.com/githiomi/multiply_batch_selector) into your terminal.  
+* git clone [this](https://github.com/githiomi/Multiply_Batch_Selector) into your terminal.  
 * Open the folder in your favourite editor, for example vscode or PyCharm
 * Enjoy the Batch Selector app
 
