@@ -71,8 +71,6 @@ def create_batches(
         # curr_datetime += time_step
         # create_batch_kwarg["current_datetime"] = curr_datetime
 
-    # Return all the batches in the array
-    print("Batches for day {}:".format(day_num) + str(batches))
     return batches
 
 
@@ -124,6 +122,7 @@ def create_batch(
                                 # Increase the batch counter
                                 batch_counter += 1
 
-        print('[' + batch + ']')
+        new_batch = batch[:-1]
+        print('[' + new_batch + ']')
 
-        return batch
+        return new_batch

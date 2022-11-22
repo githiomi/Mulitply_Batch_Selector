@@ -24,7 +24,7 @@ num_days = 7
 # for large db
 datafile = "db_large.csv"
 DAILY_BATCHES = 30
-MAX_BATCH_SIZE = 6
+MAX_BATCH_SIZE = 8
 
 curr_datetime = datetime.datetime.now()
 
@@ -37,6 +37,7 @@ for i in range(num_days):
 
     # Add your create_batches args here
     daily_batch = create_batches(i+1, DAILY_BATCHES, MAX_BATCH_SIZE, datafile, curr_datetime)
+    print("Batches for day {}:".format(1 + 1) + str(daily_batch))
 
 # TODO: Save info about your batch to a file
 # with open("new" + datafile, 'w') as batches:
