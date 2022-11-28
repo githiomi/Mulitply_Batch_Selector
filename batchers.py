@@ -58,7 +58,6 @@ def create_batches(
 
     for i in range(num_batches):
         # Call the create_batch function
-
         time = str("{}".format(hour) + ":" + "{}".format(int(minute)))
 
         print("Batch number {}".format(i + 1), "of {}".format(num_batches), "at {}".format(time))
